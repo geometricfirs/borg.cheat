@@ -1,0 +1,14 @@
+% borg
+
+# create borg repo in <folder>
+borg init --encryption=repokey-blake2 <folder>
+
+# export key for repo in <folder> to <key_backup>
+borg key export <folder> <key_backup>.txt
+
+# create backup of <source>, named <name> into repo in folder <folder>
+borg create --progress --stats --compression zlib <folder>::<name> <source>
+
+$ folder: ~/Backup/repo
+$ name: monday
+$ source: ~/code
