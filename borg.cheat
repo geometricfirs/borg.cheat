@@ -8,7 +8,3 @@ borg key export <folder> <key_backup>.txt
 
 # create backup of <source>, named <name> into repo in folder <folder>
 borg create --progress --stats --compression zlib <folder>::<name> <source>
-
-$ folder: ~/Backup/repo
-$ name: monday
-$ source: ~/code
